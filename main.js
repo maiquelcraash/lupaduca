@@ -7,7 +7,7 @@
 
 
 	let carousel = {
-		imgs: document.getElementById('slideshow').children,											// pega todos os imgs
+		imgs: document.getElementById('ld-slideshow').children,											// pega todos os imgs
 		interval: 6000,
 		currentSlide: 0,
 		playEvent: "",
@@ -57,7 +57,6 @@
 				clearInterval(this.playEvent);
 				this.playEvent = null;
 			}
-
 		}
 	};
 
