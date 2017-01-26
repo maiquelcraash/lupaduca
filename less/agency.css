@@ -17,22 +17,10 @@ a:active,
 a.active {
   color: #fec503;
 }
-h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
-  font-family: "Montserrat", "Helvetica Neue", Helvetica, Arial, sans-serif;
-  text-transform: uppercase;
-  font-weight: 700;
-}
 .btn-primary {
   color: white;
   background-color: #fed136;
   border-color: #fed136;
-  font-family: "Montserrat", "Helvetica Neue", Helvetica, Arial, sans-serif;
-  text-transform: uppercase;
   font-weight: 700;
 }
 .btn-primary:hover,
@@ -76,8 +64,6 @@ fieldset[disabled] .btn-primary.active {
   color: white;
   background-color: #fed136;
   border-color: #fed136;
-  font-family: "Montserrat", "Helvetica Neue", Helvetica, Arial, sans-serif;
-  text-transform: uppercase;
   font-weight: 700;
   border-radius: 3px;
   font-size: 18px;
@@ -121,14 +107,13 @@ fieldset[disabled] .btn-xl.active {
   background-color: white;
 }
 #mainNav {
-  background-color: #222222;
+  background-color: rgba(255, 255, 255, 0.9);
 }
 #mainNav .navbar-toggler {
   border: 0;
   color: white;
   background-color: #fed136;
   font-size: 12px;
-  font-family: "Montserrat", "Helvetica Neue", Helvetica, Arial, sans-serif;
   text-transform: uppercase;
   padding: 13px;
   right: 0;
@@ -146,11 +131,12 @@ fieldset[disabled] .btn-xl.active {
 #mainNav .container .navbar-brand.active {
   color: #fec503;
 }
+#mainNav .container .navbar-brand img {
+  height: 52px;
+}
 #mainNav .container .navbar-nav .nav-item .nav-link {
   font-size: 90%;
   padding: 0.75em 0;
-  font-family: "Montserrat", "Helvetica Neue", Helvetica, Arial, sans-serif;
-  text-transform: uppercase;
   font-weight: 400;
   letter-spacing: 1px;
   color: white;
@@ -161,8 +147,7 @@ fieldset[disabled] .btn-xl.active {
 }
 @media (min-width: 992px) {
   #mainNav {
-    background-color: transparent;
-    padding: 25px 0;
+    background-color: rgba(255, 255, 255, 0.9);
     -webkit-transition: padding 0.3s;
     -moz-transition: padding 0.3s;
     transition: padding 0.3s;
@@ -174,11 +159,16 @@ fieldset[disabled] .btn-xl.active {
     -moz-transition: all 0.3s;
     transition: all 0.3s;
   }
+  #mainNav .navbar-brand img {
+    height: 80px;
+    -webkit-transition: all 0.3s;
+    -moz-transition: all 0.3s;
+    transition: all 0.3s;
+  }
   #mainNav .navbar-nav .nav-item .nav-link {
     padding: 1.1em 1em !important;
   }
   #mainNav.navbar-shrink {
-    background-color: #222222;
     padding: 0;
   }
   #mainNav.navbar-shrink .navbar-brand {
@@ -210,8 +200,6 @@ header .intro-text .intro-lead-in {
   margin-bottom: 25px;
 }
 header .intro-text .intro-heading {
-  font-family: "Montserrat", "Helvetica Neue", Helvetica, Arial, sans-serif;
-  text-transform: uppercase;
   font-weight: 700;
   font-size: 50px;
   line-height: 50px;
@@ -230,8 +218,6 @@ header .intro-text .intro-heading {
     margin-bottom: 25px;
   }
   header .intro-text .intro-heading {
-    font-family: "Montserrat", "Helvetica Neue", Helvetica, Arial, sans-serif;
-    text-transform: uppercase;
     font-weight: 700;
     font-size: 75px;
     line-height: 75px;
@@ -239,7 +225,7 @@ header .intro-text .intro-heading {
   }
 }
 section {
-  padding: 100px 0;
+  padding: 52px 0;
 }
 section h2.section-heading {
   font-size: 40px;
@@ -256,7 +242,24 @@ section h3.section-subheading {
 }
 @media (min-width: 768px) {
   section {
-    padding: 150px 0;
+    padding: 102px 0;
+  }
+}
+#features {
+  height: calc(100vh - 52px);;
+}
+#features div {
+  height: inherit;
+  width: 100%;
+}
+#features h1 {
+  width: 100%;
+  text-align: center;
+}
+@media (min-width: 768px) {
+  #features {
+    --padding: 50px;
+    height: calc(100vh - 52px - var(--padding));
   }
 }
 .service-heading {
@@ -542,28 +545,20 @@ section#contact .form-control:focus {
   box-shadow: none;
 }
 section#contact ::-webkit-input-placeholder {
-  font-family: "Montserrat", "Helvetica Neue", Helvetica, Arial, sans-serif;
-  text-transform: uppercase;
   font-weight: 700;
   color: #eeeeee;
 }
 section#contact :-moz-placeholder {
   /* Firefox 18- */
-  font-family: "Montserrat", "Helvetica Neue", Helvetica, Arial, sans-serif;
-  text-transform: uppercase;
   font-weight: 700;
   color: #eeeeee;
 }
 section#contact ::-moz-placeholder {
   /* Firefox 19+ */
-  font-family: "Montserrat", "Helvetica Neue", Helvetica, Arial, sans-serif;
-  text-transform: uppercase;
   font-weight: 700;
   color: #eeeeee;
 }
 section#contact :-ms-input-placeholder {
-  font-family: "Montserrat", "Helvetica Neue", Helvetica, Arial, sans-serif;
-  text-transform: uppercase;
   font-weight: 700;
   color: #eeeeee;
 }
@@ -577,16 +572,12 @@ footer {
 footer span.copyright {
   font-size: 90%;
   line-height: 40px;
-  font-family: "Montserrat", "Helvetica Neue", Helvetica, Arial, sans-serif;
-  text-transform: uppercase;
   text-transform: none;
 }
 footer ul.quicklinks {
   font-size: 90%;
   margin-bottom: 0;
   line-height: 40px;
-  font-family: "Montserrat", "Helvetica Neue", Helvetica, Arial, sans-serif;
-  text-transform: uppercase;
   text-transform: none;
 }
 ul.social-buttons {

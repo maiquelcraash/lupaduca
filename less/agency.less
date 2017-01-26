@@ -26,22 +26,14 @@ a {
     }
 }
 
-h1, h2, h3, h4, h5, h6 {
-    .heading-font;
-    font-weight: 700;
-}
-
 // Restyled Primary Buttons
-
 .btn-primary {
     .button-variant(white; @theme-primary; @theme-primary);
-    .heading-font;
     font-weight: 700;
 }
 
 .btn-xl {
     .button-variant(white; @theme-primary; @theme-primary);
-    .heading-font;
     font-weight: 700;
     border-radius: 3px;
     font-size: 18px;
@@ -51,14 +43,13 @@ h1, h2, h3, h4, h5, h6 {
 // Custom Navigation Bar
 
 #mainNav {
-    background-color: @gray-darker;
+    background-color: rgba(255, 255, 255, 0.9);
     .navbar-toggler {
         border: 0;
         color: white;
         background-color: @theme-primary;
         font-size: 12px;
         text-transform: uppercase;
-        .heading-font;
         padding: 13px;
         right: 0;
     }
@@ -73,13 +64,15 @@ h1, h2, h3, h4, h5, h6 {
             &.active {
                 color: darken(@theme-primary, 10%);
             }
+            img {
+                height: 52px;
+            }
         }
         .navbar-nav {
             .nav-item {
                 .nav-link {
                     font-size: 90%;
                     padding: 0.75em 0;
-                    .heading-font;
                     font-weight: 400;
                     letter-spacing: 1px;
                     color: white;
@@ -93,10 +86,10 @@ h1, h2, h3, h4, h5, h6 {
     }
 }
 
-@media(min-width:992px) {
+@media (min-width: 992px) {
     #mainNav {
-        background-color: transparent;
-        padding: 25px 0;
+        background-color: rgba(255, 255, 255, 0.9);
+        //padding: @navbar-padding-size 0;
         -webkit-transition: padding 0.3s;
         -moz-transition: padding 0.3s;
         transition: padding 0.3s;
@@ -106,6 +99,13 @@ h1, h2, h3, h4, h5, h6 {
             -webkit-transition: all 0.3s;
             -moz-transition: all 0.3s;
             transition: all 0.3s;
+
+            img {
+                height: 80px;
+                -webkit-transition: all 0.3s;
+                -moz-transition: all 0.3s;
+                transition: all 0.3s;
+            }
         }
         .navbar-nav {
             .nav-item {
@@ -115,15 +115,18 @@ h1, h2, h3, h4, h5, h6 {
             }
         }
         &.navbar-shrink {
-            background-color: @gray-darker;
+            //background-color: @gray-darker;
             padding: 0;
             .navbar-brand {
                 padding: 12px 0;
                 font-size: 1.25em;
             }
         }
+
     }
 }
+
+// Header properties
 
 header {
     background-image: url('../img/header-bg.jpg');
@@ -144,7 +147,6 @@ header {
             margin-bottom: 25px;
         }
         .intro-heading {
-            .heading-font;
             font-weight: 700;
             font-size: 50px;
             line-height: 50px;
@@ -153,7 +155,7 @@ header {
     }
 }
 
-@media(min-width:768px) {
+@media (min-width: 768px) {
     header {
         .intro-text {
             padding-top: 300px;
@@ -166,7 +168,6 @@ header {
                 margin-bottom: 25px;
             }
             .intro-heading {
-                .heading-font;
                 font-weight: 700;
                 font-size: 75px;
                 line-height: 75px;
@@ -179,7 +180,7 @@ header {
 // Global Section Styles
 
 section {
-    padding: 100px 0;
+    padding: 52px 0;
     h2.section-heading {
         font-size: 40px;
         margin-top: 0;
@@ -195,9 +196,34 @@ section {
     }
 }
 
-@media(min-width:768px) {
+@media (min-width: 768px) {
     section {
-        padding: 150px 0;
+        padding: 102px 0;
+    }
+}
+
+// Features Section
+#features {
+    //Set height automaticaly based on viewport height minus header
+    height: ~"calc(100vh - 52px);";
+
+    //Set all inner div elements to the same size
+    div {
+        height: inherit;
+        width: 100%;
+    }
+
+    h1 {
+        width: 100%;
+        text-align: center;
+    }
+}
+
+@media (min-width: 768px) {
+    #features {
+        //Set height automaticaly based on viewport height minus header
+        --padding: @navbar-padding-size * 2;
+        height: ~"calc(100vh - 52px - var(--padding))";
     }
 }
 
@@ -247,8 +273,8 @@ section {
                     h4 {
                         margin: 0;
                     }
-                }                
-            }            
+                }
+            }
         }
         .portfolio-caption {
             max-width: 400px;
@@ -273,7 +299,7 @@ section {
     }
 }
 
-@media(min-width:767px) {
+@media (min-width: 767px) {
     #portfolio {
         .portfolio-item {
             margin: 0 0 30px;
@@ -384,7 +410,7 @@ section {
     }
 }
 
-@media(min-width:768px) {
+@media (min-width: 768px) {
     .timeline {
         &:before {
             left: 50%;
@@ -418,7 +444,7 @@ section {
     }
 }
 
-@media(min-width:992px) {
+@media (min-width: 992px) {
     .timeline {
         > li {
             min-height: 150px;
@@ -442,7 +468,7 @@ section {
     }
 }
 
-@media(min-width:1200px) {
+@media (min-width: 1200px) {
     .timeline {
         > li {
             min-height: 170px;
@@ -520,24 +546,20 @@ section#contact {
         box-shadow: none;
     }
     ::-webkit-input-placeholder {
-       .heading-font;
-       font-weight: 700;
-       color: @gray-lighter;
+        font-weight: 700;
+        color: @gray-lighter;
     }
     :-moz-placeholder { /* Firefox 18- */
-       .heading-font;
-       font-weight: 700;
-       color: @gray-lighter;
+        font-weight: 700;
+        color: @gray-lighter;
     }
-    ::-moz-placeholder {  /* Firefox 19+ */
-       .heading-font;
-       font-weight: 700;
-       color: @gray-lighter;
+    ::-moz-placeholder { /* Firefox 19+ */
+        font-weight: 700;
+        color: @gray-lighter;
     }
-    :-ms-input-placeholder {  
-       .heading-font;
-       font-weight: 700;
-       color: @gray-lighter;
+    :-ms-input-placeholder {
+        font-weight: 700;
+        color: @gray-lighter;
     }
     .text-danger {
         color: @theme-danger;
@@ -552,14 +574,12 @@ footer {
     span.copyright {
         font-size: 90%;
         line-height: 40px;
-        .heading-font;
         text-transform: none;
     }
     ul.quicklinks {
         font-size: 90%;
         margin-bottom: 0;
         line-height: 40px;
-        .heading-font;
         text-transform: none;
     }
 }
@@ -599,7 +619,7 @@ ul.social-buttons {
 }
 
 .portfolio-modal {
-    .modal-dialog{
+    .modal-dialog {
         margin: 0;
         height: 100%;
         max-width: none;
@@ -636,9 +656,9 @@ ul.social-buttons {
     }
     .close-modal {
         position: absolute;
-        width:75px;
-        height:75px;
-        background-color:transparent;
+        width: 75px;
+        height: 75px;
+        background-color: transparent;
         top: 25px;
         right: 25px;
         cursor: pointer;
@@ -646,28 +666,28 @@ ul.social-buttons {
             opacity: 0.3;
         }
         .lr {
-            height:75px;
-            width:1px;
-            margin-left:35px;
-            background-color:@gray-darker;
+            height: 75px;
+            width: 1px;
+            margin-left: 35px;
+            background-color: @gray-darker;
             transform: rotate(45deg);
             -ms-transform: rotate(45deg);
             /* IE 9 */
             -webkit-transform: rotate(45deg);
             /* Safari and Chrome */
-            z-index:1051;
+            z-index: 1051;
             .rl {
-                height:75px;
-                width:1px;
-                background-color:@gray-darker;
+                height: 75px;
+                width: 1px;
+                background-color: @gray-darker;
                 transform: rotate(90deg);
                 -ms-transform: rotate(90deg);
                 /* IE 9 */
                 -webkit-transform: rotate(90deg);
                 /* Safari and Chrome */
-                z-index:1052;
-            }            
-        }        
+                z-index: 1052;
+            }
+        }
     }
     .modal-backdrop {
         opacity: 0;
