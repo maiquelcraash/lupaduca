@@ -1,7 +1,9 @@
 @import "variables.less";
 @import "mixins.less";
 
-// Global Components
+/**********************************************************************************************
+GLOBAL STYLES
+***********************************************************************************************/
 
 body {
     overflow-x: hidden;
@@ -40,7 +42,56 @@ a {
     padding: 20px 40px;
 }
 
-// Custom Navigation Bar
+section {
+    padding: 52px 0;
+    h2.section-heading {
+        font-size: 40px;
+        margin-top: 0;
+        margin-bottom: 15px;
+    }
+    h3.section-subheading {
+        font-size: 16px;
+        .serif-font;
+        text-transform: none;
+        font-style: italic;
+        font-weight: 400;
+        margin-bottom: 75px;
+    }
+}
+
+@media (min-width: 768px) {
+    section {
+        padding: 102px 0;
+    }
+}
+
+// Highlight Color Customization
+
+::-moz-selection {
+    text-shadow: none;
+    background: @theme-primary;
+}
+
+::selection {
+    text-shadow: none;
+    background: @theme-primary;
+}
+
+img::selection {
+    background: transparent;
+}
+
+img::-moz-selection {
+    background: transparent;
+}
+
+body {
+    webkit-tap-highlight-color: @theme-primary;
+}
+
+/**********************************************************************************************
+NAVEGATION BAR STYLES
+***********************************************************************************************/
 
 #mainNav {
     background-color: rgba(255, 255, 255, 0.9);
@@ -127,7 +178,9 @@ a {
     }
 }
 
-// Header properties
+/**********************************************************************************************
+HEADER STYLES
+***********************************************************************************************/
 
 header {
     background-image: url('../img/header-bg.jpg');
@@ -178,32 +231,10 @@ header {
     }
 }
 
-// Global Section Styles
+/**********************************************************************************************
+FEATURES STYLES
+***********************************************************************************************/
 
-section {
-    padding: 52px 0;
-    h2.section-heading {
-        font-size: 40px;
-        margin-top: 0;
-        margin-bottom: 15px;
-    }
-    h3.section-subheading {
-        font-size: 16px;
-        .serif-font;
-        text-transform: none;
-        font-style: italic;
-        font-weight: 400;
-        margin-bottom: 75px;
-    }
-}
-
-@media (min-width: 768px) {
-    section {
-        padding: 102px 0;
-    }
-}
-
-// Features Section
 #features {
     //Set height automaticaly based on viewport height minus header
     height: ~"calc(100vh - 52px);";
@@ -248,14 +279,18 @@ section {
     }
 }
 
-// Services Section
+/**********************************************************************************************
+SERVICES STYLES
+***********************************************************************************************/
 
 .service-heading {
     margin: 15px 0;
     text-transform: none;
 }
 
-// Portfolio Section
+/**********************************************************************************************
+PORTFOLIO STYLES
+***********************************************************************************************/
 
 #portfolio {
     .portfolio-item {
@@ -328,7 +363,9 @@ section {
     }
 }
 
-// Timeline
+/**********************************************************************************************
+TIMELINE STYLES
+***********************************************************************************************/
 
 .timeline {
     list-style: none;
@@ -511,7 +548,9 @@ section {
     }
 }
 
-// Team Section
+/**********************************************************************************************
+TEAM STYLES
+***********************************************************************************************/
 
 .team-member {
     text-align: center;
@@ -531,7 +570,9 @@ section {
     }
 }
 
-// Clients Aside
+/**********************************************************************************************
+CLIENT STYLES
+***********************************************************************************************/
 
 aside.clients {
     img {
@@ -539,7 +580,9 @@ aside.clients {
     }
 }
 
-// Contact Section
+/**********************************************************************************************
+CONTACT STYLES
+***********************************************************************************************/
 
 section#contact {
     background-color: @gray-darker;
@@ -716,26 +759,3 @@ ul.social-buttons {
     }
 }
 
-// Highlight Color Customization
-
-::-moz-selection {
-    text-shadow: none;
-    background: @theme-primary;
-}
-
-::selection {
-    text-shadow: none;
-    background: @theme-primary;
-}
-
-img::selection {
-    background: transparent;
-}
-
-img::-moz-selection {
-    background: transparent;
-}
-
-body {
-    webkit-tap-highlight-color: @theme-primary;
-}

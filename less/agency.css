@@ -1,3 +1,6 @@
+/**********************************************************************************************
+GLOBAL STYLES
+***********************************************************************************************/
 body {
   overflow-x: hidden;
   font-family: "Roboto Slab", "Helvetica Neue", Helvetica, Arial, sans-serif;
@@ -106,6 +109,47 @@ fieldset[disabled] .btn-xl.active {
   color: #fed136;
   background-color: white;
 }
+section {
+  padding: 52px 0;
+}
+section h2.section-heading {
+  font-size: 40px;
+  margin-top: 0;
+  margin-bottom: 15px;
+}
+section h3.section-subheading {
+  font-size: 16px;
+  font-family: "Droid Serif", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  text-transform: none;
+  font-style: italic;
+  font-weight: 400;
+  margin-bottom: 75px;
+}
+@media (min-width: 768px) {
+  section {
+    padding: 102px 0;
+  }
+}
+::-moz-selection {
+  text-shadow: none;
+  background: #fed136;
+}
+::selection {
+  text-shadow: none;
+  background: #fed136;
+}
+img::selection {
+  background: transparent;
+}
+img::-moz-selection {
+  background: transparent;
+}
+body {
+  webkit-tap-highlight-color: #fed136;
+}
+/**********************************************************************************************
+NAVEGATION BAR STYLES
+***********************************************************************************************/
 #mainNav {
   background-color: rgba(255, 255, 255, 0.9);
 }
@@ -175,6 +219,9 @@ fieldset[disabled] .btn-xl.active {
     height: 50px !important;
   }
 }
+/**********************************************************************************************
+HEADER STYLES
+***********************************************************************************************/
 header {
   background-image: url('../img/header-bg.jpg');
   background-repeat: no-repeat;
@@ -223,27 +270,9 @@ header .intro-text .intro-heading {
     margin-bottom: 50px;
   }
 }
-section {
-  padding: 52px 0;
-}
-section h2.section-heading {
-  font-size: 40px;
-  margin-top: 0;
-  margin-bottom: 15px;
-}
-section h3.section-subheading {
-  font-size: 16px;
-  font-family: "Droid Serif", "Helvetica Neue", Helvetica, Arial, sans-serif;
-  text-transform: none;
-  font-style: italic;
-  font-weight: 400;
-  margin-bottom: 75px;
-}
-@media (min-width: 768px) {
-  section {
-    padding: 102px 0;
-  }
-}
+/**********************************************************************************************
+FEATURES STYLES
+***********************************************************************************************/
 #features {
   height: calc(100vh - 52px);;
   position: relative;
@@ -277,10 +306,16 @@ section h3.section-subheading {
     height: calc(100vh - var(--height));
   }
 }
+/**********************************************************************************************
+SERVICES STYLES
+***********************************************************************************************/
 .service-heading {
   margin: 15px 0;
   text-transform: none;
 }
+/**********************************************************************************************
+PORTFOLIO STYLES
+***********************************************************************************************/
 #portfolio .portfolio-item {
   margin: 0 0 15px;
   right: 0;
@@ -346,6 +381,9 @@ section h3.section-subheading {
     margin: 0 0 30px;
   }
 }
+/**********************************************************************************************
+TIMELINE STYLES
+***********************************************************************************************/
 .timeline {
   list-style: none;
   padding: 0;
@@ -513,6 +551,9 @@ section h3.section-subheading {
     padding: 0 100px 20px 20px;
   }
 }
+/**********************************************************************************************
+TEAM STYLES
+***********************************************************************************************/
 .team-member {
   text-align: center;
   margin-bottom: 50px;
@@ -530,9 +571,15 @@ section h3.section-subheading {
 .team-member p {
   margin-top: 0;
 }
+/**********************************************************************************************
+CLIENT STYLES
+***********************************************************************************************/
 aside.clients img {
   margin: 50px auto;
 }
+/**********************************************************************************************
+CONTACT STYLES
+***********************************************************************************************/
 section#contact {
   background-color: #222222;
   background-image: url('../img/map-image.png');
@@ -696,21 +743,4 @@ ul.social-buttons li a:active {
 .portfolio-modal .modal-backdrop {
   opacity: 0;
   display: none;
-}
-::-moz-selection {
-  text-shadow: none;
-  background: #fed136;
-}
-::selection {
-  text-shadow: none;
-  background: #fed136;
-}
-img::selection {
-  background: transparent;
-}
-img::-moz-selection {
-  background: transparent;
-}
-body {
-  webkit-tap-highlight-color: #fed136;
 }
