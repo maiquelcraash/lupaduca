@@ -144,7 +144,7 @@ fieldset[disabled] .btn-xl.active {
   padding: 0.75em 0;
   font-weight: 400;
   letter-spacing: 1px;
-  color: white;
+  color: #555555;
 }
 #mainNav .container .navbar-nav .nav-item .nav-link:hover,
 #mainNav .container .navbar-nav .nav-item .nav-link.active {
@@ -152,10 +152,10 @@ fieldset[disabled] .btn-xl.active {
 }
 @media (min-width: 992px) {
   #mainNav {
-    background-color: rgba(255, 255, 255, 0.9);
-    -webkit-transition: padding 0.3s;
-    -moz-transition: padding 0.3s;
-    transition: padding 0.3s;
+    height: 102px;
+    -webkit-transition: height 0.3s;
+    -moz-transition: height 0.3s;
+    transition: height 0.3s;
     border: none;
   }
   #mainNav .navbar-brand {
@@ -165,20 +165,19 @@ fieldset[disabled] .btn-xl.active {
     transition: all 0.3s;
   }
   #mainNav .navbar-brand img {
-    height: 80px;
     -webkit-transition: all 0.3s;
     -moz-transition: all 0.3s;
     transition: all 0.3s;
+    height: 90px !important;
   }
   #mainNav .navbar-nav .nav-item .nav-link {
     padding: 1.1em 1em !important;
   }
   #mainNav.navbar-shrink {
-    padding: 0;
+    height: 61.2px;
   }
-  #mainNav.navbar-shrink .navbar-brand {
-    padding: 12px 0;
-    font-size: 1.25em;
+  #mainNav.navbar-shrink .navbar-brand img {
+    height: 50px !important;
   }
 }
 header {
@@ -252,6 +251,7 @@ section h3.section-subheading {
 }
 #features {
   height: calc(100vh - 52px);;
+  position: relative;
 }
 #features div {
   height: inherit;
@@ -261,10 +261,25 @@ section h3.section-subheading {
   width: 100%;
   text-align: center;
 }
+#features .carousel-item .slide {
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-attachment: scroll;
+  background-size: cover;
+}
+#features .carousel-item .slide1 {
+  background-image: url('../img/features/slide1.jpg');
+}
+#features .carousel-item .slide2 {
+  background-image: url('../img/features/slide2.jpg');
+}
+#features .carousel-item .slide3 {
+  background-image: url('../img/features/slide3.jpg');
+}
 @media (min-width: 768px) {
   #features {
-    --padding: 50px;
-    height: calc(100vh - 52px - var(--padding));
+    --height: 102px;
+    height: calc(100vh - var(--height));
   }
 }
 .service-heading {

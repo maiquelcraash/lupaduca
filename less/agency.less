@@ -75,7 +75,7 @@ a {
                     padding: 0.75em 0;
                     font-weight: 400;
                     letter-spacing: 1px;
-                    color: white;
+                    color: @gray;
                     &:hover,
                     &.active {
                         color: @theme-primary;
@@ -88,11 +88,10 @@ a {
 
 @media (min-width: 992px) {
     #mainNav {
-        background-color: rgba(255, 255, 255, 0.9);
-        //padding: @navbar-padding-size 0;
-        -webkit-transition: padding 0.3s;
-        -moz-transition: padding 0.3s;
-        transition: padding 0.3s;
+        height: @navbar-height-size;
+        -webkit-transition: height 0.3s;
+        -moz-transition: height 0.3s;
+        transition: height 0.3s;
         border: none;
         .navbar-brand {
             font-size: 1.75em;
@@ -101,10 +100,10 @@ a {
             transition: all 0.3s;
 
             img {
-                height: 80px;
                 -webkit-transition: all 0.3s;
                 -moz-transition: all 0.3s;
                 transition: all 0.3s;
+                height: 90px !important;
             }
         }
         .navbar-nav {
@@ -115,11 +114,13 @@ a {
             }
         }
         &.navbar-shrink {
-            //background-color: @gray-darker;
-            padding: 0;
+            height: @navbar-height-size * 0.60;
             .navbar-brand {
-                padding: 12px 0;
-                font-size: 1.25em;
+                img {
+                    height: 50px !important;
+                }
+                //padding: 12px 0;
+                //font-size: 1.25em;
             }
         }
 
@@ -206,6 +207,7 @@ section {
 #features {
     //Set height automaticaly based on viewport height minus header
     height: ~"calc(100vh - 52px);";
+    position: relative;
 
     //Set all inner div elements to the same size
     div {
@@ -217,13 +219,32 @@ section {
         width: 100%;
         text-align: center;
     }
+
+    //slides background
+    .carousel-item {
+        .slide {
+            background-repeat: no-repeat;
+            background-position: center center;
+            background-attachment: scroll;
+            background-size: cover;
+        }
+        .slide1 {
+            background-image: url('../img/features/slide1.jpg');
+        }
+        .slide2 {
+            background-image: url('../img/features/slide2.jpg');
+        }
+        .slide3 {
+            background-image: url('../img/features/slide3.jpg');
+        }
+    }
 }
 
 @media (min-width: 768px) {
     #features {
         //Set height automaticaly based on viewport height minus header
-        --padding: @navbar-padding-size * 2;
-        height: ~"calc(100vh - 52px - var(--padding))";
+        --height: @navbar-height-size;
+        height: ~"calc(100vh - var(--height))";
     }
 }
 
