@@ -56,7 +56,7 @@ body {
   border-radius: 50%;
   filter: blur(2px);
 }
-.widget .widget-container .widget-title h1 {
+.widget .widget-container .widget-text h1 {
   color: #fed136;
   font-family: Arial, sans-serif;
   font-weight: bold;
@@ -64,4 +64,11 @@ body {
   text-shadow: 1px 1px #C6B00E;
   text-align: center;
   margin-top: 30px;
+}
+.widget .widget-container .widget-text p {
+  padding: 0 5px 0 5px;
+  color: #777777;
+  font-family: Arial, sans-serif;
+  font-size: 12pt;
+  text-align: center;
 }

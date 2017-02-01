@@ -70,15 +70,23 @@ body {
             filter: blur(2px);
         }
 
-        .widget-title {
+        .widget-text {
             h1 {
                 color: @theme-yellow;
-                font-family: Arial, sans-serif;
+                font-family: @font-primary;
                 font-weight: bold;
                 font-size: 18pt;
                 text-shadow: 1px 1px #C6B00E;
                 text-align: center;
                 margin-top: 30px;
+            }
+
+            p {
+                padding: 0 5px 0 5px;
+                color: @gray-light;
+                font-family: @font-primary;
+                font-size: 12pt;
+                text-align: center;
             }
         }
     }
