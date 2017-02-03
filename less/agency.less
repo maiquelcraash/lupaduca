@@ -17,18 +17,22 @@ body {
 .yellow {
     color: @theme-yellow;
     background-color: @theme-yellow;
+    border-color: @theme-yellow;
 }
 .pink {
     color: @theme-pink;
     background-color: @theme-pink;
+    border-color: @theme-pink;
 }
 .green{
     color: @theme-green;
     background-color: @theme-green;
+    border-color: @theme-green;
 }
 .orange{
     color: @theme-orange;
     background-color: @theme-orange;
+    border-color: @theme-orange;
 }
 
 p {
@@ -302,27 +306,23 @@ SERVICES STYLES
 
 .widget {
     position: relative;
-    width: 200px;
-    height: 526px;
+    margin-top: 15px;
+    width: 100%;
+    height: 400px;
+    border: 4px solid;
+    border-radius: 8px;
+    background-color: transparent;
+    box-shadow: 3px 2px 6px grey;
 
     .widget-sheet {
-        max-width: 100%;
-        max-height: 100%;
+        display: none;
     }
-
     .widget-clip {
-        position: absolute;
-        top: -50px;
-        left: 57px;
-        z-index: 2;
+        display: none;
     }
 
     .widget-container {
-        position: absolute;
-        width: 180px;
-        height: 427px;
-        top: 7px;
-        left: 3px;
+        width: 100%;
 
         .widget-strips {
 
@@ -377,13 +377,42 @@ SERVICES STYLES
             }
 
             p {
-                padding: 0px 5px 0 5px;
+                padding: 0 5px 0 5px;
                 color: @gray-light;
                 font-family: @font-primary;
                 font-size: 12pt;
                 text-align: center;
                 line-height: normal;
             }
+        }
+    }
+}
+
+@media (min-width: 768px) {
+    .widget {
+        width: 200px;
+        height: 526px;
+        border: none;
+        box-shadow: none;
+
+        .widget-sheet {
+            max-width: 100%;
+            max-height: 100%;
+            display: inline;
+        }
+        .widget-clip {
+            position: absolute;
+            top: -50px;
+            left: 57px;
+            z-index: 2;
+            display: inline;
+        }
+        .widget-container{
+            position: absolute;
+            top: 7px;
+            left: 3px;
+            width: 180px;
+            height: 427px;
         }
     }
 }
