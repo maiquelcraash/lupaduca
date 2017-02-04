@@ -19,17 +19,20 @@ body {
     background-color: @theme-yellow;
     border-color: @theme-yellow;
 }
+
 .pink {
     color: @theme-pink;
     background-color: @theme-pink;
     border-color: @theme-pink;
 }
-.green{
+
+.green {
     color: @theme-green;
     background-color: @theme-green;
     border-color: @theme-green;
 }
-.orange{
+
+.orange {
     color: @theme-orange;
     background-color: @theme-orange;
     border-color: @theme-orange;
@@ -204,37 +207,56 @@ HEADER STYLES
 ***********************************************************************************************/
 
 header {
-    background-image: url('../img/header-bg.jpg');
-    background-repeat: no-repeat;
-    background-attachment: scroll;
-    background-position: center center;
+    background: @theme-blue;
+    background: radial-gradient(@theme-blue, #456677);
     .background-cover;
     text-align: center;
     color: white;
+
+
+    .container {
+        background-image: url('../img/header-bg2.png');
+        background-repeat: no-repeat;
+        background-attachment: scroll;
+        background-position: center center;
+        background-size: contain;
+        //.background-cover;
+    }
+
     .intro-text {
         padding-top: 100px;
-        padding-bottom: 50px;
-        .intro-lead-in {
-            .serif-font;
-            font-style: italic;
-            font-size: 22px;
-            line-height: 22px;
-            margin-bottom: 25px;
-        }
-        .intro-heading {
-            font-weight: 700;
-            font-size: 50px;
-            line-height: 50px;
-            margin-bottom: 25px;
+        padding-bottom: 100px;
+
+        .text-container {
+            background-color: rgba(0, 0, 0, 0.6);
+            padding: 30px 0 30px 0;
+            border-radius: 10px;
+            padding-left: 20px;
+            padding-right: 20px;
+
+            .intro-lead-in {
+                .serif-font;
+                font-style: italic;
+                font-size: 22pt;
+                line-height: 22px;
+                margin-bottom: 25px;
+            }
+            .intro-heading {
+                font-weight: 700;
+                font-size: 50px;
+                line-height: 50px;
+                margin-bottom: 25px;
+            }
         }
     }
 }
 
 @media (min-width: 768px) {
     header {
+        padding-top: 150px;
+        padding-bottom: 80px;
+
         .intro-text {
-            padding-top: 300px;
-            padding-bottom: 200px;
             .intro-lead-in {
                 .serif-font;
                 font-style: italic;
@@ -304,115 +326,124 @@ FEATURES STYLES
 SERVICES STYLES
 ***********************************************************************************************/
 
-.widget {
-    position: relative;
-    margin-top: 15px;
-    width: 100%;
-    height: 400px;
-    border: 4px solid;
-    border-radius: 8px;
-    background-color: transparent;
-    box-shadow: 3px 2px 6px grey;
+#services {
+    background-color: @theme-light-gray;
+    margin-top: 100px;
 
-    .widget-sheet {
-        display: none;
-    }
-    .widget-clip {
-        display: none;
-    }
-
-    .widget-container {
+    .widget {
+        position: relative;
+        margin-top: 15px;
         width: 100%;
+        height: 400px;
+        border-radius: 8px;
+        background-color: white;
+        box-shadow: 3px 2px 6px grey;
 
-        .widget-strips {
-
-            .widget-strip {
-                width: 100%;
-            }
-
-            div:nth-of-type(1) {
-                height: 30px;
-            }
-
-            div:nth-of-type(2) {
-                margin-top: 15px;
-                height: 8px;
-            }
-
-            div:nth-of-type(3) {
-                margin-top: 10px;
-                height: 3px;
-            }
+        .widget-sheet {
+            display: none;
+        }
+        .widget-clip {
+            display: none;
         }
 
-        .widget-icon {
-            display: block;
-            margin-top: 20px;
-            margin-left: auto;
-            margin-right: auto;
-            max-height: 117px;
-        }
+        .widget-container {
+            width: 100%;
 
-        .widget-separator1 {
-            background-color: rgba(0, 0, 0, 0.1);
-            width: 80px;
-            height: 6px;
-            display: block;
-            margin-left: auto;
-            margin-right: auto;
-            margin-top: 30px;
-            border-radius: 50%;
-            filter: blur(2px);
-        }
+            .widget-strips {
 
-        .widget-text {
-            h1 {
-                background-color: transparent;
-                font-family: @font-primary;
-                font-weight: bold;
-                font-size: 16pt;
-                text-shadow: 1px 1px @gray-light;
-                text-align: center;
+                .widget-strip {
+                    width: 100%;
+                }
+
+                div:nth-of-type(1) {
+                    height: 30px;
+                }
+
+                div:nth-of-type(2) {
+                    margin-top: 15px;
+                    height: 8px;
+                }
+
+                div:nth-of-type(3) {
+                    margin-top: 10px;
+                    height: 3px;
+                }
+            }
+
+            .widget-icon {
+                display: block;
+                margin-top: 20px;
+                margin-left: auto;
+                margin-right: auto;
+                max-height: 117px;
+            }
+
+            .widget-separator1 {
+                background-color: rgba(0, 0, 0, 0.1);
+                width: 80px;
+                height: 6px;
+                display: block;
+                margin-left: auto;
+                margin-right: auto;
                 margin-top: 30px;
+                border-radius: 50%;
+                filter: blur(2px);
             }
 
-            p {
-                padding: 0 5px 0 5px;
-                color: @gray-light;
-                font-family: @font-primary;
-                font-size: 12pt;
-                text-align: center;
-                line-height: normal;
+            .widget-text {
+                h1 {
+                    background-color: transparent;
+                    font-family: @font-primary;
+                    font-weight: bold;
+                    font-size: 16pt;
+                    text-shadow: 1px 1px @gray-light;
+                    text-align: center;
+                    margin-top: 30px;
+                }
+
+                p {
+                    padding: 0 5px 0 5px;
+                    color: @gray-light;
+                    font-family: @font-primary;
+                    font-size: 12pt;
+                    text-align: center;
+                    line-height: normal;
+                }
             }
         }
     }
 }
 
 @media (min-width: 768px) {
-    .widget {
-        width: 200px;
-        height: 526px;
-        border: none;
-        box-shadow: none;
+    #services {
+        margin-bottom: -170px;
 
-        .widget-sheet {
-            max-width: 100%;
-            max-height: 100%;
-            display: inline;
-        }
-        .widget-clip {
-            position: absolute;
-            top: -50px;
-            left: 57px;
-            z-index: 2;
-            display: inline;
-        }
-        .widget-container{
-            position: absolute;
-            top: 7px;
-            left: 3px;
-            width: 180px;
-            height: 427px;
+        .widget {
+            width: 200px;
+            height: 526px;
+            border: none;
+            box-shadow: none;
+            background-color: transparent;
+
+            .widget-sheet {
+                max-width: 100%;
+                max-height: 100%;
+                display: inline;
+            }
+            .widget-clip {
+                position: absolute;
+                top: -50px;
+                left: 57px;
+                z-index: 2;
+                display: inline;
+            }
+            .widget-container {
+                position: absolute;
+                top: 7px;
+                left: 3px;
+                width: 180px;
+                height: 427px;
+            }
         }
     }
 }
