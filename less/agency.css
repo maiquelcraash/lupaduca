@@ -85,8 +85,8 @@ fieldset[disabled] .btn-primary.active {
 }
 .btn-xl {
   color: white;
-  background-color: #fed136;
-  border-color: #fed136;
+  background-color: #F78522;
+  border-color: #F78522;
   font-weight: 700;
   border-radius: 3px;
   font-size: 18px;
@@ -99,8 +99,8 @@ fieldset[disabled] .btn-primary.active {
 .btn-xl:active:focus,
 .open .dropdown-toggle.btn-xl {
   color: white;
-  background-color: #fec503;
-  border-color: #f6bf01;
+  background-color: #de6b08;
+  border-color: #d46708;
 }
 .btn-xl:active,
 .btn-xl.active,
@@ -122,11 +122,11 @@ fieldset[disabled] .btn-xl:active,
 .btn-xl.disabled.active,
 .btn-xl[disabled].active,
 fieldset[disabled] .btn-xl.active {
-  background-color: #fed136;
-  border-color: #fed136;
+  background-color: #F78522;
+  border-color: #F78522;
 }
 .btn-xl .badge {
-  color: #fed136;
+  color: #F78522;
   background-color: white;
 }
 section {
@@ -273,13 +273,13 @@ header .intro-text .text-container {
 header .intro-text .text-container .intro-lead-in {
   font-family: "Droid Serif", "Helvetica Neue", Helvetica, Arial, sans-serif;
   font-style: italic;
-  font-size: 22pt;
+  font-size: 18pt;
   line-height: 22px;
   margin-bottom: 25px;
 }
 header .intro-text .text-container .intro-heading {
   font-weight: 700;
-  font-size: 50px;
+  font-size: 44px;
   line-height: 50px;
   margin-bottom: 25px;
 }
@@ -291,13 +291,13 @@ header .intro-text .text-container .intro-heading {
   header .intro-text .intro-lead-in {
     font-family: "Droid Serif", "Helvetica Neue", Helvetica, Arial, sans-serif;
     font-style: italic;
-    font-size: 40px;
+    font-size: 34px;
     line-height: 40px;
     margin-bottom: 25px;
   }
   header .intro-text .intro-heading {
     font-weight: 700;
-    font-size: 75px;
+    font-size: 24pt;
     line-height: 75px;
     margin-bottom: 50px;
   }
@@ -684,28 +684,38 @@ TIMELINE STYLES
 /**********************************************************************************************
 TEAM STYLES
 ***********************************************************************************************/
-.team-member {
+#price {
+  background: #40B649;
+  background: radial-gradient(#40B649, #3f9a67);
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  background-size: cover;
+  -o-background-size: cover;
   text-align: center;
-  margin-bottom: 50px;
+  color: white;
 }
-.team-member img {
-  height: 225px;
-  width: 225px;
-  border: 7px solid white;
+#price .section-heading,
+#price .section-subheading,
+#price p {
+  color: inherit !important;
 }
-.team-member h4 {
-  margin-top: 25px;
-  margin-bottom: 0;
-  text-transform: none;
+#price .price-box {
+  display: table;
+  border: 2px solid #fff;
+  border-radius: 12px;
+  width: 230px;
+  height: 210px;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 15px;
+  padding: 15px;
 }
-.team-member p {
-  margin-top: 0;
+#price .price-box .price-content {
+  display: table-cell;
+  vertical-align: middle;
 }
-/**********************************************************************************************
-CLIENT STYLES
-***********************************************************************************************/
-aside.clients img {
-  margin: 50px auto;
+#price .description {
+  margin-top: 40px;
 }
 /**********************************************************************************************
 CONTACT STYLES
