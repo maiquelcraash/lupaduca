@@ -332,6 +332,9 @@ FEATURES STYLES
 #features .carousel-item .slide3 {
   background-image: url('../img/features/slide3.jpg');
 }
+#features .carousel-item .slide4 {
+  background-image: url('../img/features/slide4.jpg');
+}
 @media (min-width: 768px) {
   #features {
     --height: 102px;
@@ -414,7 +417,7 @@ SERVICES STYLES
 }
 @media (min-width: 768px) {
   #services {
-    margin-bottom: -170px;
+    margin-bottom: -100px;
   }
   #services .widget {
     width: 200px;
@@ -422,6 +425,8 @@ SERVICES STYLES
     border: none;
     box-shadow: none;
     background-color: transparent;
+    margin-left: auto;
+    margin-right: auto;
   }
   #services .widget .widget-sheet {
     max-width: 100%;
