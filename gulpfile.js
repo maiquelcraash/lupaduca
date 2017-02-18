@@ -81,7 +81,7 @@ gulp.task('minify-js', ['clean', 'build'], () => {
 });
 
 // Copy vendor libraries from /node_modules into /vendor
-gulp.task('copy' , ['clean'], function () {
+gulp.task('copy' , ['clean', 'minify-css', 'minify-js'], function () {
 	gulp.src(['node_modules/bootstrap/dist/**/*', '!**/npm.js', '!**/bootstrap-theme.*', '!**/*.map'])
 		.pipe(gulp.dest('lib/bootstrap'));
 

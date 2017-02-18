@@ -332,6 +332,13 @@ SERVICES STYLES
     background-color: @theme-light-gray;
     margin-top: 100px;
 
+    .section-description {
+        font-weight: normal;
+        font-size: 14pt;
+        margin-top: 20px;
+        margin-bottom: 50px;
+    }
+
     .widget {
         position: relative;
         margin-top: 15px;
@@ -405,11 +412,12 @@ SERVICES STYLES
 
                 p {
                     padding: 0 5px 0 5px;
-                    color: @gray-light;
+                    color: @gray;
                     font-family: @font-primary;
                     font-size: 12pt;
                     text-align: center;
                     line-height: normal;
+                    margin-top: 20px;
                 }
             }
         }
@@ -419,6 +427,12 @@ SERVICES STYLES
 @media (min-width: 768px) {
     #services {
         margin-bottom: -100px;
+
+        .section-description {
+            margin-left: 100px;
+            margin-right: 100px;
+            margin-bottom: 70px !important;
+        }
 
         .widget {
             width: 200px;
@@ -723,7 +737,7 @@ TEAM STYLES
     text-align: center;
     color: white;
 
-    .section-heading, .section-subheading, p{
+    .section-heading, .section-subheading, p {
         color: inherit !important;
     }
 
@@ -749,7 +763,6 @@ TEAM STYLES
     }
 }
 
-
 /**********************************************************************************************
 CONTACT STYLES
 ***********************************************************************************************/
@@ -759,62 +772,61 @@ section#contact {
     background-image: url('../img/map-image.png');
     background-position: center;
     background-repeat: no-repeat;
+
     .section-heading {
         color: white;
     }
-    .form-group {
-        margin-bottom: 25px;
-        input,
-        textarea {
-            padding: 20px;
+
+    .section-subheading{
+        color: @gray-lighter;
+    }
+
+    .info {
+        margin-top: -20px;
+
+        .mail {
+            color: white;
+            font-size: 22pt;
+            text-align: center;
+            line-height: 60px;
+
+            a {
+                color: inherit;
+            }
         }
-        input.form-control {
-            height: auto;
+
+        .facebook {
+            img {
+                display: block;
+                margin-left: auto;
+                margin-right: auto;
+            }
         }
-        textarea.form-control {
-            height: 236px;
-        }
-    }
-    .form-control:focus {
-        border-color: @theme-yellow;
-        box-shadow: none;
-    }
-    ::-webkit-input-placeholder {
-        font-weight: 700;
-        color: @gray-lighter;
-    }
-    :-moz-placeholder { /* Firefox 18- */
-        font-weight: 700;
-        color: @gray-lighter;
-    }
-    ::-moz-placeholder { /* Firefox 19+ */
-        font-weight: 700;
-        color: @gray-lighter;
-    }
-    :-ms-input-placeholder {
-        font-weight: 700;
-        color: @gray-lighter;
-    }
-    .text-danger {
-        color: @theme-danger;
     }
 }
 
 // Footer
 
 footer {
-    padding: 25px 0;
+    padding: 5px 0;
     text-align: center;
+    color: @gray;
+
     span.copyright {
+        color: inherit;
         font-size: 90%;
         line-height: 40px;
         text-transform: none;
     }
     ul.quicklinks {
+        color: inherit;
         font-size: 90%;
         margin-bottom: 0;
         line-height: 40px;
         text-transform: none;
+    }
+    a {
+        color: inherit;
     }
 }
 
