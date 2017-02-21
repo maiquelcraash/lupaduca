@@ -10,6 +10,11 @@ body {
     .body-font;
 }
 
+/* Pre-load images */
+div#preload {
+    display: none;
+}
+
 .text-primary {
     color: @theme-yellow !important;
 }
@@ -333,10 +338,12 @@ SERVICES STYLES
     margin-top: 100px;
 
     .section-description {
+        line-height: normal;
         font-weight: normal;
         font-size: 14pt;
         margin-top: 20px;
         margin-bottom: 50px;
+        color: @gray-light;
     }
 
     .widget {
@@ -410,7 +417,7 @@ SERVICES STYLES
                     margin-top: 30px;
                 }
 
-                p {
+                h4 {
                     padding: 0 5px 0 5px;
                     color: @gray;
                     font-family: @font-primary;
@@ -589,6 +596,12 @@ TIMELINE STYLES
                 left: -14px;
                 right: auto;
             }
+            .subheading {
+                font-size: 24px;
+                font-weight: 500;
+            }
+
+
         }
         .timeline-image {
             left: 0;
@@ -755,6 +768,21 @@ TEAM STYLES
         .price-content {
             display: table-cell;
             vertical-align: middle;
+
+            .price-value {
+                font-size: 2.5rem;
+                font-family: inherit;
+                font-weight: 500;
+                line-height: 1.1;
+                color: inherit;
+            }
+            .price-description {
+                font-size: 1.5rem;
+                font-family: inherit;
+                font-weight: 500;
+                line-height: 1.1;
+                color: inherit;
+            }
         }
     }
 
@@ -777,7 +805,7 @@ section#contact {
         color: white;
     }
 
-    .section-subheading{
+    .section-subheading {
         color: @gray-lighter;
     }
 
