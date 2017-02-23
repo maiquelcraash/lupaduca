@@ -333,10 +333,10 @@ FEATURES STYLES
   background-size: cover;
 }
 #features .carousel-item .slide1 {
-  background-image: url('../img/features/slide1.jpg');
+  background-image: url('../img/features/slide1.svg');
 }
 #features .carousel-item .slide2 {
-  background-image: url('../img/features/slide2.jpg');
+  background-image: url('../img/features/slide2.svg');
 }
 #features .carousel-item .slide3 {
   background-image: url('../img/features/slide3.jpg');
@@ -402,7 +402,9 @@ SERVICES STYLES
   margin-top: 20px;
   margin-left: auto;
   margin-right: auto;
-  max-height: 117px;
+  background-repeat: no-repeat;
+  background-attachment: scroll;
+  background-image: url('../img/sprites.png');
 }
 #services .widget .widget-container .widget-separator1 {
   background-color: rgba(0, 0, 0, 0.1);
@@ -606,6 +608,13 @@ TIMELINE STYLES
   border: 7px solid #f1f1f1;
   text-align: center;
 }
+.timeline > li .timeline-image .step-img {
+  background-repeat: no-repeat;
+  background-attachment: scroll;
+  background-image: url('../img/sprites.png');
+  height: 100%;
+  width: 100%;
+}
 .timeline > li .timeline-image h4 {
   font-size: 10px;
   margin-top: 12px;
@@ -790,10 +799,14 @@ section#contact .info .mail {
 section#contact .info .mail a {
   color: inherit;
 }
-section#contact .info .facebook img {
-  display: block;
+section#contact .info .facebook .facebook-img {
+  background-image: url('../img/sprites.png');
+  background-position: center;
+  background-repeat: no-repeat;
   margin-left: auto;
   margin-right: auto;
+  width: 250px;
+  height: 54px;
 }
 footer {
   padding: 5px 0;
