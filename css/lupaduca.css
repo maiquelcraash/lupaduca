@@ -37,6 +37,11 @@ div#preload {
   background-color: #F78522;
   border-color: #F78522;
 }
+.blue {
+  color: #47C8E8;
+  background-color: #47C8E8;
+  border-color: #47C8E8;
+}
 p {
   line-height: 1.75;
 }
@@ -609,11 +614,14 @@ TIMELINE STYLES
   text-align: center;
 }
 .timeline > li .timeline-image .step-img {
-  background-repeat: no-repeat;
-  background-attachment: scroll;
-  background-image: url('../img/sprites.png');
   height: 100%;
   width: 100%;
+  color: white;
+  border: none;
+  font-weight: 500;
+  text-align: center;
+  line-height: 50pt;
+  font-size: 44pt;
 }
 .timeline > li .timeline-image h4 {
   font-size: 10px;
@@ -699,6 +707,10 @@ TIMELINE STYLES
     margin-top: 30px;
     line-height: 26px;
   }
+  .timeline > li .timeline-image .step-img {
+    line-height: 96pt;
+    font-size: 84pt;
+  }
   .timeline > li.timeline-inverted > .timeline-panel {
     padding: 0 20px 20px;
   }
@@ -717,6 +729,10 @@ TIMELINE STYLES
   }
   .timeline > li .timeline-image h4 {
     margin-top: 40px;
+  }
+  .timeline > li .timeline-image .step-img {
+    line-height: 113pt;
+    font-size: 94pt;
   }
   .timeline > li.timeline-inverted > .timeline-panel {
     padding: 0 100px 20px 20px;
